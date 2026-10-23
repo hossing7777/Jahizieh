@@ -26,7 +26,7 @@ android {
     signingConfigs {
         create("release") {
             if (keystorePassword.isNotEmpty()) {
-                storeFile = file(keystoreFile)
+                storeFile = rootProject.file(keystoreFile)
                 storePassword = keystorePassword
                 keyAlias = keyAliasEnv
                 keyPassword = keyPasswordEnv
